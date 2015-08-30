@@ -1,0 +1,270 @@
+Find the zero roots of the function f(x) = cos(x)-x over the interval  [0.5,1]
+
+
+Inverse Linear Interpolation Method
+
+x0=.5,x1=1;
+
+x0 =
+
+    0.5000
+
+x2 = x1 - [(cos(x1)-x1)*(x1-x0)] / ((cos(x1)-x1) - (cos(x0)-x0))
+
+x2 =
+
+    0.7255
+
+evaluateLeftBound = cos(x0)-x0
+
+evaluateLeftBound =
+
+    0.3776
+
+evaluateMidpoint = cos(x2)-x2
+
+evaluateMidpoint =
+
+    0.0227
+
+evaluateRightBound = cos(x1)-x1
+
+evaluateRightBound =
+
+   -0.4597
+
+x0 = x2
+
+x0 =
+
+    0.7255
+
+x3 = x1 - [(cos(x1)-x1)*(x1-x0)] / ((cos(x1)-x1) - (cos(x0)-x0))
+
+x3 =
+
+    0.7384
+
+evaluateLeftBound = cos(x0)-x0
+
+evaluateLeftBound =
+
+    0.0227
+
+evaluateMidpoint = cos(x3)-x3
+
+evaluateMidpoint =
+
+    0.0011
+
+evaluateRightBound = cos(x1)-x1
+
+evaluateRightBound =
+
+   -0.4597
+
+x0=x3
+
+x0 =
+
+    0.7384
+
+x4 = x1 - [(cos(x1)-x1)*(x1-x0)] / ((cos(x1)-x1) - (cos(x0)-x0))
+
+x4 =
+
+    0.7391
+
+evaluateLeftBound = cos(x0)-x0
+
+evaluateLeftBound =
+
+    0.0011
+
+evaluateMidpoint = cos(x4)-x4
+
+evaluateMidpoint =
+
+   5.7575e-05
+
+evaluateRightBound = cos(x1)-x1
+
+evaluateRightBound =
+
+   -0.4597
+
+x0=x4
+
+x0 =
+
+    0.7391
+
+x5 = x1 - [(cos(x1)-x1)*(x1-x0)] / ((cos(x1)-x1) - (cos(x0)-x0))
+
+x5 =
+
+    0.7391
+
+evaluateLeftBound = cos(x0)-x0
+
+evaluateLeftBound =
+
+   5.7575e-05
+
+evaluateMidpoint = cos(x5)-x5
+
+evaluateMidpoint =
+
+   2.8842e-06
+
+evaluateRightBound = cos(x1)-x1
+
+evaluateRightBound =
+
+   -0.4597
+
+
+
+
+
+Bisection Method
+
+>> x=0.5:.125:1;
+>> x0=.5,x1=1;
+
+x0 =
+
+    0.5000
+
+>> disp('first iteration')
+first iteration
+>> midpoint = (x0+x1)/2
+
+midpoint =
+
+    0.7500
+
+>> cos(x0)-x0
+
+ans =
+
+    0.3776
+
+>> cos(midpoint)-midpoint
+
+ans =
+
+   -0.0183
+
+>> cos(x1)-x1
+
+ans =
+
+   -0.4597
+
+>> disp('second iteration')
+second iteration
+>> x1=midpoint
+
+x1 =
+
+    0.7500
+
+>> midpoint = (x0+x1)/2
+
+midpoint =
+
+    0.6250
+
+>> cos(midpoint)-midpoint
+
+ans =
+
+    0.1860
+
+>> cos(x1)-x1
+
+ans =
+
+   -0.0183
+
+>> disp('third iteration')
+third iteration
+>> x0=midpoint
+
+x0 =
+
+    0.6250
+
+>> midpoint = (x0+x1)/2
+
+midpoint =
+
+    0.6875
+
+>> cos(x0)-x0
+
+ans =
+
+    0.1860
+
+>> cos(midpoint)-midpoint
+
+ans =
+
+    0.0853
+
+>> disp('fourth iteration')
+fourth iteration
+>> x0=midpoint
+
+x0 =
+
+    0.6875
+
+>> midpoint = (x0+x1)/2
+
+midpoint =
+
+    0.7188
+
+>> cos(x0)-x0
+
+ans =
+
+    0.0853
+
+>> cos(midpoint)-midpoint
+
+ans =
+
+    0.0339
+
+>> disp('fifth iteration')
+fifth iteration
+>> x0=midpoint
+
+x0 =
+
+    0.7188
+
+>> midpoint = (x0+x1)/2
+
+midpoint =
+
+    0.7344
+
+>> cos(x0)-x0
+
+ans =
+
+    0.0339
+
+>> cos(midpoint)-midpoint
+
+ans =
+
+    0.0079
+
+>> 
+
