@@ -1,0 +1,5 @@
+determine whether fixed point iteration is locally convergent to the given fixed point.
+
+use M.V.T (formula)
+
+answer/error = function(i+1) = asb(other_function'(fixedpoint))*function(i)
