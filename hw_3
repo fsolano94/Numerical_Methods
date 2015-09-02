@@ -1,1 +1,24 @@
 
+hwk3 Newtons Method
+find the x-intercepts of the function f(x) = cos(x)-x = 0.
+f is f(x) and fp is the derivative of f(x) with respect to x
+
+In Matlab:
+
+f = inline('cos(x)-x');
+fp = inline('-sin(x)-1');
+
+while(feval(f,midpoint) > 0)
+midpoint = midpoint - (feval(f,midpoint)/feval(fp,midpoint))
+end
+
+midpoint = 
+
+  
+   0.755222417105636
+
+
+The exact answer calculated using wolfram alpha is 0.7390851332151606
+
+which means the percentage error for this exercise using Newtons method is = 0.016137248
+
